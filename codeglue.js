@@ -78,7 +78,7 @@ rimraf("./builds/web", () => {
                 },
                 {
                     "loader": "file-loader",
-                    "test": new RegExp("\.(png|jpe?g|gif|svg)$", "i"),
+                    "test": new RegExp("\.(png|jpe?g|gif|svg|.ico)$", "i"),
                 },
                 {
                     "loader": "file-loader",
@@ -143,7 +143,8 @@ rimraf("./builds/web", () => {
                     "https": SSL && {
                         "key": require.resolve("./localhost.key"),
                         "cert": require.resolve("./localhost.crt")
-                    }
+                    },
+                    "open": false
                 })
 
                 print("Listening on " + chalk.underline(PROTOCOL + "://" + LOCAL_ADDRESS + ":" + PORT))
