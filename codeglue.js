@@ -46,10 +46,10 @@ const build = new Object()
 
 rimraf("./builds/web", () => {
     webpack({
-        "entry": {
-            "polyfill": "babel-polyfill",
-            "index.js": "./source/index.js",
-        },
+        "entry": [
+            "./node_modules/babel-polyfill",
+            "./source/index.js"
+        ],
         "output": {
             "filename": "[name]",
             "path": path.resolve("./builds/web"),
