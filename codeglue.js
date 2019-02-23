@@ -47,6 +47,7 @@ const build = new Object()
 rimraf("./builds/web", () => {
     webpack({
         "entry": {
+            "polyfill": "babel-polyfill",
             "index.js": "./source/index.js",
         },
         "output": {
