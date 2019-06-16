@@ -78,8 +78,12 @@ rimraf("./builds/web", () => {
                     "test": new RegExp("\.(css|less)$", "i"),
                 },
                 {
+                    "loader": "url-loader",
+                    "test": new RegExp("\.(png|jpe?g|gif|svg)$", "i"),
+                },
+                {
                     "loader": "file-loader",
-                    "test": new RegExp("\.(png|jpe?g|gif|svg|.ico)$", "i"),
+                    "test": new RegExp("\.(.ico)$", "i"),
                 },
                 {
                     "loader": "file-loader",
