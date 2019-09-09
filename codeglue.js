@@ -91,6 +91,10 @@ rimraf("./builds/web", () => {
                 },
                 {
                     "loader": "file-loader",
+                    "test": new RegExp("\.(xlsm)$", "i"),
+                },
+                {
+                    "loader": "file-loader",
                     "test": new RegExp("\.(mp3|wav|ogg)$", "i"),
                 },
                 {
