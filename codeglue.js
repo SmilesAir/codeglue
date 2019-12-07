@@ -158,6 +158,11 @@ rimraf("./builds/web", () => {
 
                 print("Listening on " + chalk.underline(PROTOCOL + "://" + LOCAL_ADDRESS + ":" + PORT))
                 print("Listening on " + chalk.underline(PROTOCOL + "://" + INTERNAL_ADDRESS + ":" + PORT))
+                print("")
+                print("")
+                print("##################################################")
+                print("Startup Finished. Ready to go!")
+                print("##################################################")
             } else if(build.server != null) {
                 build.server.reload()
             }
